@@ -877,7 +877,7 @@ class Tool(Scenario):
     def initCallback(self, scenario):
         self.scenario = scenario
         platform = Params.get('global', 'platform')
-        is_windows = not platform or platform.lower() == "windows"
+        is_windows = not platform or platform.lower() in ["windows", "w365"]
 
         # Read all parameters
         als = Params.get(self.module, 'als_adaptive_brightness').strip()
